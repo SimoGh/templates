@@ -14,6 +14,8 @@ services:
 
    wordpress:
      image: wordpress:latest
+     volumes:
+       - ${USERDIR}/yellowphone/wp/data:/var/www/html
      ports:
        - 80
      restart: always
